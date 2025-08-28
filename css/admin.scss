@@ -1,0 +1,135 @@
+.acf-field-true-false[data-type="true_false"] {
+  position: relative; 
+  .acf-label {
+    padding-left: 23px;
+  }
+  .acf-input {
+    display: inline-block;
+    width: auto;
+    position: absolute;
+    top: 14px;
+    left: 16px;
+  }
+}
+
+.acf-field-flexible-content[data-name="flexible_content"] {
+  [data-layout="image_and_text_block"] {
+    div.acf-fields {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      div.acf-field {
+        width: 100%;
+        &.acf-field-image {
+          width: 25%;
+          .acf-image-uploader {
+            width: 100%;
+            .image-wrap {
+              max-width: 100%!important;
+              width: 100%!important;
+              img {
+                width: 100%!important;
+                height: auto;
+                min-width: unset!important;
+                min-height: unset!important;
+                max-height: unset!important;
+              }
+            }
+          }
+        }
+        &.acf-field-wysiwyg {
+          width: 74%;
+        }
+      }
+    }
+    [data-name="image_placement"],
+    [data-name="image_overlap"] {
+      width: 20%!important;
+    }    
+    [data-name="textbg"]  {
+      width: 60%!important;
+    }
+    .acf-field-true-false[data-type="true_false"] {
+      .acf-label {
+        top: 26px;
+      }
+      .acf-input {
+        top: 41px;
+        transform: scale(1.2);
+        left: 12px;
+      }
+    }
+  }
+  [data-layout="two_column_section"] {
+    .acf-fields {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      div.acf-field {
+        width: 50%;
+      }
+    } 
+  }
+}
+
+body.wp-admin.post-type-portfolio {
+  #post-body-content:has([data-name="main_photo"]):has([data-name="gallery"]) {
+    @media screen and (min-width: 1280px) {
+      .inside.acf-fields {
+        display: flex;
+        flex-wrap: wrap;
+        .acf-field {
+          width: 100%;
+        }
+        .acf-field[data-name="main_photo"] {
+          width: 30%;
+          .acf-image-uploader {
+            .image-wrap {
+              max-width: 100%!important;
+              width: 100%!important;
+              img {
+                width: 100%!important;
+                height: auto!important;
+              }
+            }
+          }
+        }
+        .acf-field[data-name="gallery"] {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+body.wp-admin.post-type-post {
+  #post-body-content:has(#postimagediv) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    #titlediv {
+      width: 100%;
+    }
+    .meta-box-sortables:has(#postimagediv) {
+      width: 25%;
+      #set-post-thumbnail {
+        width: 100%;
+        img {
+          width: 100%!important;
+          height: auto!important;
+        }
+      }
+    }
+    #postdivrich {
+      width: 73%;
+    }
+
+    @media screen and (max-width: 1250px) {
+      .meta-box-sortables:has(#postimagediv),
+      #postdivrich {
+        width: 100%!important;
+      }
+    }
+  }
+}
+
