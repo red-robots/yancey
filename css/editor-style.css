@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @font-face {
   font-family: "FTCursive";
   src: url("fonts/cursive/cursive.eot");
@@ -44,12 +44,12 @@ body {
   appearance: none;
   border: none;
   border-radius: 5px;
-  padding: 10px 15px 12px;
+  padding: 8px 20px;
   font-family: "Lato", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.03em;
   color: #FFF !important;
   transition: all ease 0.4s;
   background-color: #E1251B;

@@ -102,6 +102,29 @@ body.wp-admin.post-type-portfolio {
   }
 }
 
+[data-name="static_image_block"]:has([data-name="static_image_mobile"]) {
+  .acf-fields {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  div.acf-field {
+    width: 100%;
+  }
+  div.acf-field[data-name="static_image"] {
+    width: auto;
+  }
+  div.acf-field[data-name="static_image_mobile"] {
+    width: auto;
+    border-left: 1px solid #eaecf0;
+  }
+}
+
+.acf-field-repeater[data-name="images"] {
+  .acf-image-uploader div.image-wrap img {
+    max-height: 85px!important;
+  }
+}
+
 body.wp-admin.post-type-post {
   #post-body-content:has(#postimagediv) {
     display: flex;

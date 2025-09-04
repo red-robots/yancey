@@ -3,7 +3,6 @@ $hero_type = get_field('hero_type');
 $static = get_field('static_image_block');
 $add_caption = (isset($static['add_caption'])) ? $static['add_caption'] : '';
 $static_image = (isset($static['static_image'])) ? $static['static_image'] : '';
-$static_image_mobile = (isset($static['static_image_mobile'])) ? $static['static_image_mobile'] : '';
 $static_title = (isset($static['title'])) ? $static['title'] : '';
 $static_description = (isset($static['description'])) ? $static['description'] : '';
 $static_buttons = (isset($static['buttons'])) ? $static['buttons'] : '';
@@ -23,7 +22,7 @@ if ($hero_type=='static_image') { ?>
       <?php if ($add_caption) { ?>
       
         <?php if ($slideTitle || $slideText) { ?>
-        <div class="imageCaption">
+        <div class="slideCaption">
           <div class="inside">
           <?php if ($slideTitle) { ?>
             <div class="title"><?php echo $slideTitle ?></div>
@@ -50,11 +49,9 @@ if ($hero_type=='static_image') { ?>
         <?php } ?>
 
       <?php } ?>
-      <figure class="image">
-        <img src="<?php echo $slideImage['url'] ?>" role="presentation" alt="" class="image-desktop">
-        <?php if ($static_image_mobile) { ?>
-        <img src="<?php echo $static_image_mobile['url'] ?>" role="presentation" alt="" class="image-mobile">
-        <?php } ?>
+      <figure class="slideImage">
+        <!-- <span class="image" style="background-image:url(<?php //echo $slideImage['url'] ?>)"></span> -->
+        <img src="<?php echo $slideImage['url'] ?>" role="presentation" alt="">
       </figure>
     </div>
   </section>
@@ -96,7 +93,7 @@ if ($hero_type=='static_image') { ?>
               </div>
             </div>
             <?php } ?>
-            <div class="image" style="background-image:url('<?php echo $slideImage['url'] ?>')"></div>
+            <div class="slideImage" style="background-image:url('<?php echo $slideImage['url'] ?>')"></div>
           </div>
           <?php } ?>
         <?php } ?>
