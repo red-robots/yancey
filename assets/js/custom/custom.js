@@ -17,18 +17,18 @@ jQuery(document).ready(function ($) {
   //   });
   // }
 
-  $(document).on('click','.mobileNavContent .submenu-toggle', function(e){
-    e.preventDefault();
-    var current = $(this);
-    $(this).toggleClass('active');
-    $(this).next().slideToggle();
-    $('.mobileNavContent .submenu-toggle').not(current).each(function(){
-      if( $(this).hasClass('active') ) {
-        $(this).removeClass('active');
-        $(this).next().slideUp();
-      }
-    });
-  });
+  // $(document).on('click','.mobileNavContent .submenu-toggle', function(e){
+  //   e.preventDefault();
+  //   var current = $(this);
+  //   $(this).toggleClass('active');
+  //   $(this).next().slideToggle();
+  //   $('.mobileNavContent .submenu-toggle').not(current).each(function(){
+  //     if( $(this).hasClass('active') ) {
+  //       $(this).removeClass('active');
+  //       $(this).next().slideUp();
+  //     }
+  //   });
+  // });
 
   $(window).on('load resize', function(){
     mobileNavigation();
@@ -84,6 +84,13 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  $('#mobile-primary-menu li.menu-item-has-children > a').each(function(){
+    var target = $(this);
+    //$(this).wrap('<span class="parent"></span><button class="mobile-menu-dropdown" aria-label="Dropdown" aria-expanded="false"><i class="fa-sharp fa-regular fa-chevron-down"></i></button>');
+    $(this).wrap('<span class="parent" />');
+    $('<button class="mobile-menu-dropdown" aria-label="Dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button>').insertAfter(target);
+  });
+
   // $(document).on('click', '.searchBtn', function(e){
   //   e.preventDefault();
   //   var expanded = $(this).attr('aria-expanded') === 'true';
@@ -129,6 +136,14 @@ jQuery(document).ready(function ($) {
     setTimeout(function(){
       $('#mobile-navigation').removeClass('open closed');
     },600);
+  });
+
+
+  $(document).on('click', '.mobile-menu-dropdown', function(e){
+    e.preventDefault();
+    var expanded = $(this).attr('aria-expanded') === 'true';
+    $(this).attr('aria-expanded', !expanded);
+    $(this).parent().next().slideToggle();
   });
 
   if( $('.repeatable--two_column_text .details').length ) {
