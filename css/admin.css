@@ -12,6 +12,10 @@
   left: 16px;
 }
 
+[data-name=hero_type][data-type=button_group] {
+  display: none;
+}
+
 .acf-field-flexible-content[data-name=flexible_content] [data-layout=image_and_text_block] div.acf-fields {
   display: flex;
   flex-wrap: wrap;
