@@ -246,7 +246,7 @@ a,input,button,textarea,select {
   text-decoration: none;
   appearance: none;
   background-color: $color_primary;
-  border: 1px solid #FFF;
+  border: 1px solid $color_primary;
   border-radius: 4px;
   padding: 13px 20px;
   font-family: $font_secondary;
