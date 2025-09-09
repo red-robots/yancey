@@ -1602,8 +1602,10 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .site-header .site-logo{width:250px}
 .site-header .site-logo a,.site-header .site-logo img{display:block;width:100%;height:auto}
 .wrapper{max-width:1800px;width:100%;margin:0 auto;padding-left:30px;padding-right:30px}
-.button{display:inline-block;text-align:center;text-decoration:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#e1251b;border:0;border-radius:4px;padding:13px 20px;font-family:"DM Sans",sans-serif;font-size:18px;font-weight:400;line-height:1.2;letter-spacing:.03em;color:#fff;-webkit-transition:all ease .3s;transition:all ease .3s;position:relative;overflow:hidden;z-index:2}
-.button:hover,.button:focus{color:#fff;background-color:#5f8db5}
+.button{display:inline-block;text-align:center;text-decoration:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#e1251b;border:1px solid #fff;border-radius:4px;padding:13px 20px;font-family:"DM Sans",sans-serif;font-size:18px;font-weight:400;line-height:1.2;letter-spacing:.03em;color:#fff;-webkit-transition:all ease .3s;transition:all ease .3s;position:relative;overflow:hidden;z-index:2}
+.button:after{content:"";display:block;width:100%;height:205%;-webkit-transition:all ease .4s;transition:all ease .4s;position:absolute;top:0;left:0;z-index:-1;-webkit-transform:translateY(-110%);transform:translateY(-110%);background-color:#e1251b;background-size:100% 100%;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,white),color-stop(65%,white),color-stop(60%,rgba(255,255,255,0)),color-stop(72%,rgba(255,255,255,0)),color-stop(65%,white),color-stop(78%,white),color-stop(75%,rgba(255,255,255,0)),color-stop(85%,rgba(255,255,255,0)),color-stop(80%,white),color-stop(90%,white),color-stop(90%,rgba(255,255,255,0)),color-stop(95%,rgba(255,255,255,0)),color-stop(90%,white),to(white));background-image:linear-gradient(to bottom,white 0,white 65%,rgba(255,255,255,0) 60%,rgba(255,255,255,0) 72%,white 65%,white 78%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 85%,white 80%,white 90%,rgba(255,255,255,0) 90%,rgba(255,255,255,0) 95%,white 90%,white 100%)}
+.button:hover,.button:focus{color:#e1251b;background-color:#fff;border-color:#e1251b}
+.button:hover:after,.button:focus:after{-webkit-transform:translateY(0);transform:translateY(0)}
 .hero{position:relative;z-index:10}
 .hero.hero-static_image{padding:0 30px}
 .hero.hero-static_image .static-hero{position:relative;z-index:10;margin-top:-3vw}
@@ -1630,8 +1632,17 @@ h6{font-size:18px}
 .repeatable_layout1 .imageCol .images figure .inner{overflow:hidden;border-radius:10px;position:relative;padding-bottom:120%}
 .repeatable_layout1 .imageCol .images figure .inner img{display:block;position:absolute;top:0;left:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
 .repeatable_layout1 .imageCol .images figure .inner:after{content:"";display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.35)}
-.repeatable_layout1 .imageCol .images figure .imageText{position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:30px;font-family:"DM Sans",sans-serif;font-size:clamp(1rem,5vw,40px);font-weight:600;line-height:1.2;letter-spacing:.03em;text-transform:uppercase;color:#fff}
-.repeatable_layout1 .imageCol .images figure:has(.imagelink) .imagelink{display:block;position:relative;border-radius:10px;overflow:hidden}
+.repeatable_layout1 .imageCol .images figure .imageTitle{position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:30px;font-family:"DM Sans",sans-serif;font-size:clamp(1rem,5vw,40px);font-weight:500;line-height:1.1;letter-spacing:.03em;text-transform:uppercase;color:#fff;-webkit-transition:all ease .3s;transition:all ease .3s}
+.repeatable_layout1 .imageCol .images figure .imageText{position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:30px;color:#fff;background:rgba(64,120,170,.85);-webkit-transition:all ease .3s;transition:all ease .3s;opacity:0}
+.repeatable_layout1 .imageCol .images figure .imageText h2{font-size:clamp(1rem,5vw,40px);font-weight:500;line-height:1.1;letter-spacing:.03em;margin:0;color:#fff !important}
+.repeatable_layout1 .imageCol .images figure .imageText p{font-size:17px;line-height:1.6}
+.repeatable_layout1 .imageCol .images figure .imageText .custom-button-element{display:inline-block;margin-top:10px}
+.repeatable_layout1 .imageCol .images figure .imageText a.button{background:transparent !important;border:1px solid #fff;padding:8px 20px 7px;position:relative;z-index:2;overflow:hidden}
+.repeatable_layout1 .imageCol .images figure .imageText a.button:after{content:"";display:block;width:100%;height:205%;-webkit-transition:all ease .3s;transition:all ease .3s;position:absolute;top:0;left:0;z-index:-1;background:-webkit-gradient(linear,left top,left bottom,from(white),color-stop(61%,white),color-stop(62%,rgba(255,255,255,0)),color-stop(66%,rgba(255,255,255,0)),color-stop(67%,white),color-stop(77%,white),color-stop(78%,rgba(255,255,255,0)),color-stop(82%,rgba(255,255,255,0)),color-stop(83%,white),color-stop(89%,white),color-stop(90%,rgba(255,255,255,0)),color-stop(93%,rgba(255,255,255,0)),color-stop(94%,white),to(white));background:linear-gradient(to bottom,white 0,white 61%,rgba(255,255,255,0) 62%,rgba(255,255,255,0) 66%,white 67%,white 77%,rgba(255,255,255,0) 78%,rgba(255,255,255,0) 82%,white 83%,white 89%,rgba(255,255,255,0) 90%,rgba(255,255,255,0) 93%,white 94%,white 100%);-webkit-transform:translateY(-110%);transform:translateY(-110%);background-size:100% 100%}
+.repeatable_layout1 .imageCol .images figure .imageText a.button:hover{color:#5f8db5}
+.repeatable_layout1 .imageCol .images figure .imageText a.button:hover:after{-webkit-transform:translateY(0);transform:translateY(0)}
+.repeatable_layout1 .imageCol .images figure.hasHover:hover .imageTitle{opacity:0;pointer-events:none}
+.repeatable_layout1 .imageCol .images figure.hasHover:hover .imageText{opacity:1}
 .repeatable_layout1 .imageCol .images figure:nth-child(even){-webkit-transform:translateY(35px);transform:translateY(35px)}
 .repeatable_layout1 .flexwrap:has(.textCol):has(.imageCol){-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .repeatable_layout1 .flexwrap:has(.textCol):has(.imageCol) .textCol{width:38%}
@@ -1663,13 +1674,14 @@ h6{font-size:18px}
 .site-footer{background:#5f8db5;color:#fff}
 .site-footer .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .site-footer .footerTop{background:#4078aa}
+.site-footer .footerTop .wrapper{max-width:100% !important;padding-left:0;padding-right:0}
 .site-footer .footerTop .portal-link{width:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
-.site-footer .footerTop .portal-link a{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:1rem;padding:30px 20px;text-decoration:none;color:#fff;font-family:"DM Sans",sans-serif;font-size:20px;font-weight:600;line-height:1.2;letter-spacing:.03em;text-transform:uppercase}
+.site-footer .footerTop .portal-link a{width:100%;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:1rem;padding:30px 20px;text-decoration:none;color:#fff;font-family:"DM Sans",sans-serif;font-size:20px;font-weight:600;line-height:1.2;letter-spacing:.03em;text-transform:uppercase}
 .site-footer .footerTop .portal-link a .inside{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:1rem;padding:10px 15px;border-radius:5px;-webkit-transition:all ease .3s;transition:all ease .3s}
 .site-footer .footerTop .portal-link a .title{letter-spacing:.05em}
 .site-footer .footerTop .portal-link a .icon-text{text-transform:none;font-size:17px;font-weight:300}
 .site-footer .footerTop .portal-link a .icon-text i{display:inline-block;margin-right:2px}
-.site-footer .footerTop .portal-link a:hover .inside,.site-footer .footerTop .portal-link a:focus .inside{background:rgba(0,0,0,.25)}
+.site-footer .footerTop .portal-link a:hover,.site-footer .footerTop .portal-link a:focus{background:#e1251b;color:#fff}
 .site-footer .footerTop .portal-link:last-child{border-left:1px solid rgba(255,255,255,.25)}
 .site-footer .footerBottom{padding-top:80px;padding-bottom:10vw}
 .site-footer .footerBottom:after{content:"";display:block;width:100%;height:100%;position:absolute;left:0;bottom:0;pointer-events:none;background-image:url("images/watermark.png");background-size:contain;background-position:bottom center;background-repeat:no-repeat;opacity:.06}
@@ -1727,7 +1739,8 @@ h6{font-size:18px}
 .repeatable_layout2 .flexwrap:has(.textCol):has(.imageCol) .backgroundColor .stripe:before{top:8px}
 .repeatable_layout2 .flexwrap:has(.textCol):has(.imageCol) .backgroundColor .stripe:after{top:22px}
 .repeatable_layout2 .flexwrap:has(.textCol):has(.imageCol) .textCol .wrap{padding:50px 5vw}
-}@media screen and (min-width:1251px){.repeatable_layout2 .flexwrap{width:90%;margin:0 auto}
+}@media screen and (min-width:1251px){.repeatable_layout1 .imageCol .images figure .imageText{padding-left:4vw;padding-right:4vw}
+.repeatable_layout2 .flexwrap{width:90%;margin:0 auto}
 }@media screen and (min-width:1481px){.hero.hero-static_image .imageCaption .inside{max-width:700px}
 .hero.hero-static_image .imageCaption .title{font-size:clamp(30px,5vw,4rem)}
 .hero.hero-static_image .imageCaption .text{font-size:clamp(1rem,2vw,23px)}
