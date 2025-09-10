@@ -234,7 +234,7 @@ a,input,button,textarea,select {
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
-  @include tab {
+  @include xl {
     padding-left: 70px;
     padding-right: 70px;
   }
@@ -490,8 +490,7 @@ h6 {font-size: 18px;}
           transition: all ease .3s;
           opacity: 0;
           @media screen and (min-width: 1251px) {
-            padding-left: 4vw;
-            padding-right: 4vw;
+            padding: 2vw 3vw;
           }
           h2 {
             font-size: clamp(1rem,5vw,40px);
@@ -500,9 +499,12 @@ h6 {font-size: 18px;}
             letter-spacing: 0.03em;
             margin: 0 0;
             color: #FFF!important;
+            @media screen and (max-width: 1250px) {
+              font-size: clamp(1rem,6vw,30px);
+            }
           }
           p {
-            font-size: 17px;
+            font-size: clamp(14px,1vw,17px);
             line-height: 1.6;
           }
           .custom-button-element {
@@ -540,6 +542,19 @@ h6 {font-size: 18px;}
         }
         
         &.hasHover {
+
+          .inner {
+            padding-bottom: 0!important;
+            height: 100%;
+            min-height: 400px;
+            @media screen and (min-width:1481px) {
+              min-height: 28vw;
+            }
+            .imageText {
+              position: relative;
+            }
+          }
+
           &:hover {
             .imageTitle {
               opacity: 0;
@@ -561,10 +576,16 @@ h6 {font-size: 18px;}
     justify-content: space-between;
     align-items: center;
     .textCol {
-      width: 38%;
+      width: 35%;
+      @media screen and (min-width: 1481px) {
+        width: 38%;
+      }
     }
     .imageCol {
-      width: 56%;
+      width: 62%;
+      @media screen and (min-width: 1481px) {
+        width: 56%;
+      }
     }
   }
 
@@ -577,15 +598,24 @@ h6 {font-size: 18px;}
         .images {
           margin-left: -6px;
           margin-right: -6px;
-          figure .imageText {
-            padding: 15px;
-          }
         }
       }
     }
     .flexwrap:has(.textCol):has(.imageCol) {
       .imageCol {
         margin-top: 30px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .imageCol .images figure {
+      width: 100%!important;
+    }
+    .imageCol .images figure.hasHover .inner {
+      min-height: 380px;
+      .imageText p {
+        font-size: 16px;
       }
     }
   }
