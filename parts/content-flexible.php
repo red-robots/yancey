@@ -1,14 +1,10 @@
 <?php if( have_rows('flexible_content') ) {  ?>
   <div class="flexible-content-wrapper">
-    <?php $ctr=1; while( have_rows('flexible_content') ): the_row(); ?>
-    <?php  
-    $templates = get_flexible_templates();
-    if($templates) {
-      foreach($templates as $template) {
-        include( locate_template($template) ); 
-      }
-    }
-    ?>
-    <?php $ctr++; endwhile; ?>
+    <?php $ctr=1; while( have_rows('flexible_content') ): the_row(); 
+    
+    include( locate_template('parts-flexible/intro_two_column.php') ); 
+    include( locate_template('parts-flexible/featured_image_and_icons.php') ); 
+    
+    $ctr++; endwhile; ?>
   </div>
 <?php } ?>

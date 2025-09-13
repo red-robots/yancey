@@ -139,4 +139,21 @@ body.wp-admin.post-type-post #post-body-content:has(#postimagediv) #postdivrich 
   }
 }
 
+[data-name=flexible_content] [data-layout=intro_two_column] .acf-fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+[data-name=flexible_content] [data-layout=intro_two_column] .acf-fields .acf-field.acf-field-wysiwyg {
+  width: 50%;
+}
+[data-name=flexible_content] [data-layout=featured_image_and_icons] > .acf-fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+[data-name=flexible_content] [data-layout=featured_image_and_icons] > .acf-fields .acf-field.acf-field-group {
+  width: 50%;
+}
+
 /*# sourceMappingURL=admin.css.map */

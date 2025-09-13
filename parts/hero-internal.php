@@ -1,6 +1,7 @@
 <?php 
-$static_image = get_field('hero_image');
-$hero_page_title = get_field('custom_page_title');
+$hero = get_field('hero_internal');
+$static_image = (isset($hero['image'])) ? $hero['image'] : '';
+$hero_page_title = (isset($hero['alt_title'])) ? $hero['alt_title'] : '';
 $custom_page_title = ($hero_page_title) ? $hero_page_title : get_the_title();
 if ($static_image) { ?>
 <section class="hero-internal">

@@ -158,3 +158,27 @@ body.wp-admin.post-type-post {
   }
 }
 
+[data-name="flexible_content"] {
+  [data-layout="intro_two_column"] {
+    .acf-fields {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .acf-field.acf-field-wysiwyg {
+        width: 50%;
+      }
+    }
+  }
+
+  [data-layout="featured_image_and_icons"] {
+    > .acf-fields {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .acf-field.acf-field-group {
+        width: 50%;
+      }
+    }
+  }
+}
+
