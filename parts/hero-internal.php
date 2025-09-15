@@ -1,19 +1,24 @@
 <?php 
-$hero = get_field('hero_internal');
-$static_image = (isset($hero['image'])) ? $hero['image'] : '';
-$hero_page_title = (isset($hero['alt_title'])) ? $hero['alt_title'] : '';
-$custom_page_title = ($hero_page_title) ? $hero_page_title : get_the_title();
+$hero = get_field('static_image');
+$hero_mobile = get_field('static_image_mobile');
+
+$static_image = (isset($hero)) ? $hero : '';
+$static_image_mobile = (isset($hero_mobile)) ? $hero_mobile : '';
+
 if ($static_image) { ?>
-<section class="hero-internal">
-  <div class="hero-inside">
-    <?php if ($custom_page_title) { ?>
-    <div class="hero-title">
-      <div class="inner"><h1 class="custom-page-title"><?php echo $custom_page_title ?></h1></div>
+  <section class="hero hero-static_image hero-inner">
+    <div class="imageCaption">
+      <div class="inside">
+        <div class="title"><?php the_title(); ?></div>
+      </div>
     </div>
-    <?php } ?>
-    <figure class="hero-image">
-      <img src="<?php echo $static_image['url'] ?>" alt="<?php echo $static_image['title'] ?>" role="presentation">
-    </figure>
-  </div>
-</section>
+    <div class="static-hero">
+      <figure class="image">
+        <img src="<?php echo $static_image['url'] ?>" role="presentation" alt="" class="image-desktop">
+        <?php if ($static_image_mobile) { ?>
+        <img src="<?php echo $static_image_mobile['url'] ?>" role="presentation" alt="" class="image-mobile">
+        <?php } ?>
+      </figure>
+    </div>
+  </section>
 <?php } ?>

@@ -19,6 +19,14 @@ function js_custom_init() {
         'menu_icon' => 'dashicons-format-gallery',
         'supports'  => array('title','editor')
       ),
+      array(
+        'post_type' => 'team',
+        'menu_name' => 'Team',
+        'plural'    => 'Teams',
+        'single'    => 'Team',
+        'menu_icon' => 'dashicons-groups',
+        'supports'  => array('title','editor','thumbnail')
+      )
     );
     
     if($post_types) {
