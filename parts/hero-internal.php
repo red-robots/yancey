@@ -6,7 +6,7 @@ $static_image = (isset($hero)) ? $hero : '';
 $static_image_mobile = (isset($hero_mobile)) ? $hero_mobile : '';
 
 if ($static_image) { ?>
-  <section class="hero hero-static_image hero-inner">
+  <section class="hero hero-static_image hero-internal">
     <div class="imageCaption">
       <div class="inside">
         <div class="title"><?php the_title(); ?></div>

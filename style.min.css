@@ -1620,8 +1620,8 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .hero.hero-static_image figure.image{margin:0}
 .hero.hero-static_image figure.image img{width:100%;height:auto}
 .hero.hero-static_image figure.image img.image-mobile{display:none}
-.hero.hero-static_image.hero-inner .imageCaption{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}
-.hero.hero-static_image.hero-inner .static-hero{margin-top:-3vw}
+.hero.hero-static_image.hero-internal .imageCaption{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}
+.hero.hero-static_image.hero-internal .static-hero{margin-top:0}
 .hero-internal{position:relative;padding:0 30px}
 .hero-internal .hero-inside{position:relative;z-index:10;width:100%;height:100%;min-height:450px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:20px;background-color:#5f8db5;overflow:hidden;border-radius:15px}
 .hero-internal .hero-inside .hero-title{max-width:1000px;width:100%;margin:0 auto;position:relative;z-index:20;text-align:center;color:#fff}
@@ -1750,19 +1750,24 @@ body:not(.home) .repeatable_featured_image_and_icons .flexwrap:has(.leftCol):has
 .contact-wrapper .flexwrap .fxcol{position:relative;z-index:5}
 .contact-wrapper .flexwrap:has(.contactCol):has(.formCol){-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:unset;-ms-flex-align:unset;align-items:unset;padding-top:80px;padding-bottom:100px}
 .contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
-.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .contactCol{background-color:#065492;border-radius:10px;color:#fff;width:40%;padding:50px}
-.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .contactCol .address{color:#fff}
-.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .contactCol .info{margin-bottom:15px}
-.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol{width:60%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:#ecf1f6}
-.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .wrap{width:100%;padding:50px}
-.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_title{font-size:2.5rem;margin-bottom:50px;text-align:center}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .contactCol{background-color:#5f8db5;border-radius:10px;color:#fff;width:38%;padding:50px}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .contactCol .address{color:#fff;font-family:"DM Sans",sans-serif;font-size:24px;margin-bottom:40px;padding-bottom:40px;position:relative}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .contactCol .address:after{content:"";position:absolute;background-color:#e1251b;height:1px;width:92px;bottom:0;left:0}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .contactCol .info{color:#444;font-size:18px;margin-bottom:15px}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .contactCol .info .name{font-family:"DM Sans",sans-serif;font-weight:600;text-transform:uppercase}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol{width:62%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:#ecf1f6}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .wrap{width:100%;padding:30px}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .wrap h3{color:#5f8db5;font-size:35px;font-weight:600;margin-top:0}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_wrapper{background:0;padding:0;width:100%}
 .contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields{row-gap:20px}
-.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields input,.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields textarea{border:0;border-radius:0;height:50px}
-.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields textarea{height:300px}
-.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .ginput_container_radio label{color:#fff}
-.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .ginput_container_radio input{border-radius:13px;height:25px;width:25px}
-.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol #gform_wrapper_1.gform-theme.gform_wrapper .gform_footer input{background-color:#fff;border-radius:34px;display:inline-block;color:#000;font-size:1.125rem;height:60px;padding:19px 40px;text-decoration:none;min-width:267px;text-align:center;margin-top:60px}
-.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol #gform_wrapper_1.gform-theme.gform_wrapper .gform_footer input:hover{text-decoration:none;opacity:.8}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields input,.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields textarea{background-color:transparent;border:1px solid #5f8db5;border-radius:10px !important;font-size:16px;height:48px;padding:16px}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields input::-webkit-input-placeholder,.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields textarea::-webkit-input-placeholder{color:rgba(95,141,181,.5)}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields input::-moz-placeholder,.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields textarea::-moz-placeholder{color:rgba(95,141,181,.5)}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields input:-ms-input-placeholder,.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields textarea:-ms-input-placeholder{color:rgba(95,141,181,.5)}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields input::-ms-input-placeholder,.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields textarea::-ms-input-placeholder{color:rgba(95,141,181,.5)}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields input::placeholder,.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields textarea::placeholder{color:rgba(95,141,181,.5)}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_fields textarea{resize:none}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .gform_wrapper .gform_button.button{border-radius:3px !important;font-family:"DM Sans",sans-serif;font-size:16px;font-weight:600;height:44px;text-decoration:none;text-transform:capitalize !important;min-width:175px;text-align:center;margin-top:25px}
 .MobileHeader{display:none}
 .mobile-menu-bar{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:0;display:block;width:40px;height:40px;background:transparent;position:absolute;top:25px;right:28px}
 .mobile-menu-bar span.bar{display:block;width:90%;height:2px;background:#000;position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}
@@ -1809,7 +1814,7 @@ body:not(.home) .repeatable_featured_image_and_icons .leftCol .imageText{padding
 .contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .backgroundColor .stripe:before,.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .backgroundColor .stripe:after{content:"";display:block;width:100%;height:6px;background:#fff;position:absolute;left:0}
 .contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .backgroundColor .stripe:before{top:8px}
 .contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .backgroundColor .stripe:after{top:22px}
-.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .wrap{padding:50px 5vw}
+.contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .wrap{padding:0 8vw}
 }@media screen and (min-width:1251px){.repeatable_layout1 .imageCol .images figure .imageText{padding:2vw 3vw}
 .repeatable_layout2 .flexwrap{width:90%;margin:0 auto}
 .contact-wrapper .flexwrap{width:90%;margin:0 auto}
@@ -1857,10 +1862,10 @@ body:not(.home) .flexwrap:has(.leftCol):has(.rightCol) .leftCol .imageText{min-h
 .repeatable_layout2 .flexwrap:has(.textCol):has(.imageCol) .backgroundColor .stripe:after{top:22px}
 .repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol){padding-top:0}
 .repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol) .contactCol,.repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol) .formCol{width:100%}
-.repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol) .formCol{border-radius:10px 10px 0 0}
-.repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol) .formCol .wrap{padding-top:85px;padding-bottom:30px}
+.repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol) .formCol{border-radius:10px;margin-top:20px}
+.repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol) .formCol .wrap{padding-top:50px;padding-bottom:30px}
 .repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol) .contactCol{padding-left:45px;padding-right:45px;position:relative}
-.repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol) .backgroundColor{display:block;position:absolute;top:0;left:0;width:100%;height:48px;pointer-events:none;z-index:100}
+.repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol) .backgroundColor{display:none;position:absolute;top:0;left:0;width:100%;height:48px;pointer-events:none;z-index:100}
 .repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol) .backgroundColor .stripe{display:block;width:180px;height:48px;position:absolute;top:8px;left:0;border-top:6px solid #fff;border-bottom:6px solid #fff}
 .repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol) .backgroundColor .stripe:before,.repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol) .backgroundColor .stripe:after{content:"";display:block;width:100%;height:6px;background:#fff;position:absolute;left:0}
 .repeatable_layout2 .flexwrap:has(.contactCol):has(.formCol) .backgroundColor .stripe:before{top:8px}

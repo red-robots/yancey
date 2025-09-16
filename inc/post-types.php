@@ -12,14 +12,6 @@ function js_custom_init() {
 
     $post_types = array(
       array(
-        'post_type' => 'portfolio',
-        'menu_name' => 'Portfolio',
-        'plural'    => 'Portfolio',
-        'single'    => 'Portfolio',
-        'menu_icon' => 'dashicons-format-gallery',
-        'supports'  => array('title','editor')
-      ),
-      array(
         'post_type' => 'team',
         'menu_name' => 'Team',
         'plural'    => 'Teams',

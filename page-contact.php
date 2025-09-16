@@ -13,6 +13,8 @@ get_header(); ?>
                         <?php
                             $address = get_field('address');
                             $address_title = get_field('address_title');
+                            $contact_form_title = get_field("contact_form_title");
+                            $contact_form = get_field("contact_form_shortcode");
 
                             if( $address && have_rows('management') ){
                         ?>
@@ -22,8 +24,10 @@ get_header(); ?>
                                     <div><?php echo $address; ?></div>
                                 </div>
                                 <?php while(have_rows('management')): the_row();
-                                        $name = get_sub_field('name');
-                                        $position = get_sub_field('position');
+                                        $team = get_sub_field('team');
+                                        $post_id = $team->ID;
+                                        $name = get_the_title($post_id);
+                                        $position = get_field('title', $post_id);
 
                                         if($name || $position) {
                                     ?>
@@ -34,18 +38,18 @@ get_header(); ?>
                                     <?php } ?>
                                 <?php endwhile; ?>
                             </div>
-                        <?php } ?>
-                        <?php if( $contact_form = get_field("contact_form_shortcode") ){ ?>
-                            <div class="fxcol formCol">
-                                <div class="wrap">
-                                    <?php echo $contact_form; ?>
+                            <?php if( $contact_form ){ ?>
+                                <div class="fxcol formCol">
+                                    <div class="wrap">
+                                        <h3><?php echo $contact_form_title; ?></h3>
+                                        <?php echo $contact_form; ?>
+                                    </div>
                                 </div>
+                            <?php } ?>
+                            <div class="backgroundColor">
+                                <span class="stripe"></span>
                             </div>
                         <?php } ?>
-
-                        <div class="backgroundColor">
-                            <span class="stripe"></span>
-                        </div>
                     </div>
                 </div>
             </section>
