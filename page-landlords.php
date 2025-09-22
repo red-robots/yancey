@@ -67,6 +67,18 @@ get_header(); ?>
                             ?>
                                 <div class="tab-pane fade <?php echo ($nav==1) ? "show active" : ""; ?> service-content" id="nav-<?php echo $nav;?>" role="tabpanel" aria-labelledby="nav-<?php echo $nav; ?>-tab">
                                     <div class="main-content"><?php echo acf_esc_html( $main_content ); ?></div>
+                                    <?php if($content_1){ ?>
+                                        <div class="sub-content <?php echo (!empty($content_2)) ? "half" : "full"; ?>">
+                                            <div class="sub-content-1">
+                                                <?php echo acf_esc_html( $content_1 ); ?>
+                                            </div>
+                                            <?php if($content_2){ ?>
+                                                <div class="sub-content-2">
+                                                    <?php echo acf_esc_html( $content_2 ); ?>
+                                                </div>
+                                            <?php } ?>
+                                        </div>
+                                    <?php } ?>
                                 </div>
                             <?php
                                 $nav++;

@@ -1316,6 +1316,41 @@ body:not(.home) {
   }
 }
 
+/*** About Page ***/
+.about-page {
+  .entry-content {
+    position: relative;
+    
+    &:after {
+      content: '';
+      background-color: $color_light_blue;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
+.about-content {
+  background-color: $color_secondary;
+  border-radius: 10px;
+  color: $color_white;
+  font-size: 18px;
+  text-align: center;
+  padding: 30px;
+
+  @media screen and (min-width:1481px) {
+    font-size: 22px;
+    padding: 80px 150px;
+  }
+
+  .wrapper {
+    max-width: 1000px;
+  }
+}
+/*** About Page  - END ***/
+
 /*** Landlords Page ***/
 .text-center {
   text-align: center;
@@ -1348,17 +1383,24 @@ body:not(.home) {
   }
 }
 
-.services-content {
+.services-content.repeatable.first {
   position: relative;
+  padding-bottom: 90px;
+
+  .wrapper {
+    max-width: 800px;
+  }
 }
 
 .services-tab {
   @include clearfix();
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 20px;
+  justify-content: space-around;
 
   @media screen and (min-width:1481px) {
+    gap: 60px;
     padding: 0 115px;
   }
 
@@ -1368,8 +1410,26 @@ body:not(.home) {
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
-    padding: 50px;
     text-align: center;
+    padding: 50px 0;
+    width: 100%;
+
+    @media screen and (min-width:641px) {
+      width: 47%;
+    }
+
+    @media screen and (min-width:1199px) {
+      width: 23%;
+    }
+
+    @media screen and (min-width:1481px) {
+      width: 20%;
+    }
+
+    &-nav {
+      border: 1px solid $color_secondary;
+      padding: 50px;
+    }
 
     &-wrap {
       max-width: 192px;
@@ -1425,7 +1485,48 @@ body:not(.home) {
     background-color: rgba(95, 141, 181, 0.12);
     border-radius: 10px;
     margin-top: 100px;
-    padding: 80px 120px;
+    padding: 50px;
+
+    @media screen and (min-width:1199px) {
+      padding: 80px 120px 30px;
+    }
+
+    .main-content {
+      color: $color_secondary;
+      font-family: $font_secondary;
+      font-size: 25px;
+      margin-bottom: 20px;
+
+      @media screen and (min-width:1199px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    .sub-content {
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      p {
+        margin-bottom: 20px;
+
+        @media screen and (min-width:1199px) {
+          margin-bottom: 50px;
+        }
+      }
+
+      @media screen and (min-width:1199px) {
+        &.half {
+          display: flex;
+          flex-direction: row;
+          gap: 80px;
+        }
+
+        &-1, &-2 {
+          width: 48%;
+        }
+      }
+    }
   }
 }
 /*** Landlords Page - END ***/
