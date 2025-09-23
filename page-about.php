@@ -6,7 +6,7 @@
 get_header(); ?>
 <div class="content-area-full content-default-template about-page">
     <main id="main" class="site-main" role="main">
-        <!-- <?php if( have_rows('flexible_content') ) { ?>
+        <?php if( have_rows('flexible_content') ) { ?>
             <?php $ctr=1; while( have_rows('flexible_content') ): the_row(); ?>
                 
                 <?php include( locate_template('parts/about-layout1.php') ); ?>
@@ -21,7 +21,7 @@ get_header(); ?>
                     <?php the_content() ?>
                 </div>
             </div>
-        <?php endwhile; ?> -->
+        <?php endwhile; ?>
     </main>
 </div><!-- #primary -->
 <?php

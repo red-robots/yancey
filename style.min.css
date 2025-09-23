@@ -1745,6 +1745,22 @@ body:not(.home) .repeatable_featured_image_and_icons .flexwrap:has(.leftCol):has
 body:not(.home) .repeatable_featured_image_and_icons .flexwrap:has(.leftCol):has(.rightCol) .leftCol,body:not(.home) .repeatable_featured_image_and_icons .flexwrap:has(.leftCol):has(.rightCol) .rightCol{margin:0}
 body:not(.home) .repeatable_featured_image_and_icons .flexwrap:has(.leftCol):has(.rightCol) .leftCol{width:50%}
 body:not(.home) .repeatable_featured_image_and_icons .flexwrap:has(.leftCol):has(.rightCol) .rightCol{width:40%}
+.about-page .about-wrapper .header{color:#5f8db5;font-family:"DM Sans",sans-serif;font-size:28px;font-weight:700;line-height:2.5rem}
+.about-page .about-wrapper .button{margin-top:30px;margin-bottom:1rem}
+.about-page .about-wrapper .content{font-size:18px}
+.about-page .about-wrapper .bannerCol{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.about-page .about-wrapper .bannerCol .banner-img{width:490px;height:490px;overflow:hidden}
+.about-page .about-wrapper .bannerCol .banner-img img{width:100%;height:auto}
+.about-page .about-wrapper .bannerCol .banner-text{background-color:#5f8db5;border-radius:10px;color:#fff;font-family:"DM Sans",sans-serif;font-size:28px;font-weight:700;position:absolute;right:-80px;padding:50px;max-width:300px}
+.about-page .about-wrapper .info{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:45px;margin-bottom:30px}
+.about-page .about-wrapper .info:last-child{margin-bottom:0}
+.about-page .about-wrapper .info-icon{width:70px}
+.about-page .about-wrapper .info-icon img{height:auto;width:100%}
+.about-page .about-wrapper .info-content{font-size:18px;max-width:250px}
+.about-page .about-wrapper .flexwrap:has(.leftCol):has(.rightCol){-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;width:100%}
+.about-page .about-wrapper .flexwrap:has(.leftCol):has(.rightCol) .leftCol,.about-page .about-wrapper .flexwrap:has(.leftCol):has(.rightCol) .rightCol{margin:0}
+.about-page .about-wrapper .flexwrap:has(.leftCol):has(.rightCol) .leftCol{width:50%}
+.about-page .about-wrapper .flexwrap:has(.leftCol):has(.rightCol) .rightCol{width:30%}
 .about-page .entry-content{position:relative}
 .about-page .entry-content:after{content:"";background-color:#ecf1f6;width:100%;position:absolute;top:50%;left:0;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
 .about-content{background-color:#5f8db5;border-radius:10px;color:#fff;font-size:18px;text-align:center;padding:30px}
@@ -1842,12 +1858,16 @@ body:not(.home) .repeatable_featured_image_and_icons .leftCol .imageText{padding
 .contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .backgroundColor .stripe:before{top:8px}
 .contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .backgroundColor .stripe:after{top:22px}
 .contact-wrapper .flexwrap:has(.contactCol):has(.formCol) .formCol .wrap{padding:0 8vw}
+}@media screen and (min-width:1140px){.about-page .about-wrapper .info{margin-bottom:85px}
 }@media screen and (min-width:1199px){.services-tab .service-item{width:23%}
 .services-tab-content{padding:80px 120px 30px}
 .services-tab-content .main-content{margin-bottom:50px}
 .services-tab-content .sub-content p{margin-bottom:50px}
 .services-tab-content .sub-content.half{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;gap:80px}
 .services-tab-content .sub-content-1,.services-tab-content .sub-content-2{width:48%}
+}@media screen and (min-width:1200px){.about-page .about-wrapper .header{font-size:35px;max-width:340px}
+.about-page .about-wrapper .button{margin-top:60px}
+.about-page .about-wrapper .bannerCol .banner-text{font-size:35px;right:-150px}
 }@media screen and (min-width:1251px){.repeatable_layout1 .imageCol .images figure .imageText{padding:2vw 3vw}
 .repeatable_layout2 .flexwrap{width:90%;margin:0 auto}
 .contact-wrapper .flexwrap{width:90%;margin:0 auto}
@@ -1861,6 +1881,7 @@ body:not(.home) .repeatable_featured_image_and_icons .leftCol .imageText{padding
 .about-content{font-size:22px;padding:80px 150px}
 .services-tab{gap:60px;padding:0 115px}
 .services-tab .service-item{width:20%}
+}@media screen and (min-width:1500px){.about-page .about-wrapper{max-width:1400px}
 }@media screen and (min-width:2800px){.hero .button{font-size:1.5rem;padding:1.15rem 1.5rem}
 .hero.hero-static_image .imageCaption .inside{max-width:40vw}
 .hero.hero-static_image .imageCaption .title{font-size:clamp(30px,6vw,5rem)}
@@ -1883,6 +1904,11 @@ body:not(.home) .flexwrap:has(.leftCol):has(.rightCol) .leftCol{margin-bottom:30
 body:not(.home) .flexwrap:has(.leftCol):has(.rightCol) .leftCol .inner{min-height:450px}
 body:not(.home) .flexwrap:has(.leftCol):has(.rightCol) .leftCol figure{width:88%}
 body:not(.home) .flexwrap:has(.leftCol):has(.rightCol) .leftCol .imageText{min-height:250px}
+.about-page .about-wrapper .flexwrap:has(.leftCol):has(.rightCol) .leftCol,.about-page .about-wrapper .flexwrap:has(.leftCol):has(.rightCol) .rightCol{width:100% !important}
+.about-page .about-wrapper .flexwrap:has(.leftCol):has(.rightCol) .leftCol{margin-bottom:30px !important}
+.about-page .about-wrapper .flexwrap:has(.leftCol):has(.rightCol) .leftCol .inner{min-height:450px}
+.about-page .about-wrapper .flexwrap:has(.leftCol):has(.rightCol) .leftCol figure{width:88%}
+.about-page .about-wrapper .flexwrap:has(.leftCol):has(.rightCol) .leftCol .imageText{min-height:250px}
 .repeatable_layout2{padding-top:60px;padding-bottom:50px}
 .repeatable_layout2 .flexwrap:has(.textCol):has(.imageCol){padding-top:0}
 .repeatable_layout2 .flexwrap:has(.textCol):has(.imageCol) .textCol,.repeatable_layout2 .flexwrap:has(.textCol):has(.imageCol) .imageCol{width:100%}

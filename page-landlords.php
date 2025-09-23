@@ -12,24 +12,24 @@ get_header(); ?>
                     <?php the_content() ?>
                 </div>
                 <?php
-                        $explore_button = get_field('button');
-                        $explore_button_text = (isset($explore_button['title']) && $explore_button['title']) ? $explore_button['title'] : '';
-                        $explore_button_url = (isset($explore_button['url']) && $explore_button['url']) ? $explore_button['url'] : '';
-                        $explore_button_target = (isset($explore_button['target']) && $explore_button['target']) ? $explore_button['target'] : '_self';
+                    $explore_button = get_field('button');
+                    $explore_button_text = (isset($explore_button['title']) && $explore_button['title']) ? $explore_button['title'] : '';
+                    $explore_button_url = (isset($explore_button['url']) && $explore_button['url']) ? $explore_button['url'] : '';
+                    $explore_button_target = (isset($explore_button['target']) && $explore_button['target']) ? $explore_button['target'] : '_self';
 
-                        if($explore_button_text && $explore_button_url) {
-                    ?>
-                        <span class="button-float-bottom">
-                            <a class="button button-element" href="<?php echo $explore_button_url; ?>" target="<?php echo $explore_button_target; ?>">
-                                <?php echo $explore_button_text; ?>
-                                <span class="icon-open-link">
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14 9.83333V14.8333C14 15.2754 13.8244 15.6993 13.5118 16.0118C13.1993 16.3244 12.7754 16.5 12.3333 16.5H3.16667C2.72464 16.5 2.30072 16.3244 1.98816 16.0118C1.67559 15.6993 1.5 15.2754 1.5 14.8333V5.66667C1.5 5.22464 1.67559 4.80072 1.98816 4.48816C2.30072 4.17559 2.72464 4 3.16667 4H8.16667M11.5 1.5H16.5M16.5 1.5V6.5M16.5 1.5L7.33333 10.6667" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
-                            </a>
-                        </span>
-                    <?php } ?>
+                    if($explore_button_text && $explore_button_url) {
+                ?>
+                    <span class="button-float-bottom">
+                        <a class="button button-element" href="<?php echo $explore_button_url; ?>" target="<?php echo $explore_button_target; ?>">
+                            <?php echo $explore_button_text; ?>
+                            <span class="icon-open-link">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 9.83333V14.8333C14 15.2754 13.8244 15.6993 13.5118 16.0118C13.1993 16.3244 12.7754 16.5 12.3333 16.5H3.16667C2.72464 16.5 2.30072 16.3244 1.98816 16.0118C1.67559 15.6993 1.5 15.2754 1.5 14.8333V5.66667C1.5 5.22464 1.67559 4.80072 1.98816 4.48816C2.30072 4.17559 2.72464 4 3.16667 4H8.16667M11.5 1.5H16.5M16.5 1.5V6.5M16.5 1.5L7.33333 10.6667" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </span>
+                <?php } ?>
             </section>
             <section class="repeatable_layout2">
                 <div class="wrapper">

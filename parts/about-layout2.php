@@ -1,46 +1,40 @@
-<?php if( get_row_layout() == 'layout1' ) {
-  $text = get_sub_field('text_content');
+<?php if( get_row_layout() == 'layout2' ) {
+  $banner = get_sub_field('banner');
+  $banner_text = get_sub_field('banner_text');
   $images = get_sub_field('images');
-  $has_content = ($text || $images) ? true : false;
-  $custom_class = ($ctr==1) ? ' first':'';
+  $has_content = ($banner_text || $images) ? true : false;
+
   if ($has_content) { ?>
-  <section id="repeatable_<?php echo get_row_layout() ?>_<?php echo $ctr ?>" data-group="<?php echo get_row_layout() ?>" class="repeatable repeatable_<?php echo get_row_layout() ?><?php echo $custom_class ?>">
-    <div class="wrapper">
+  <section id="repeatable_<?php echo get_row_layout() ?>_<?php echo $ctr ?>" data-group="<?php echo get_row_layout() ?>" class="repeatable repeatable_<?php echo get_row_layout() ?>">
+    <div class="wrapper about-wrapper">
       <div class="flexwrap">
         
-        <?php if ($text) { ?>
-        <div class="fxcol textCol">
-          <?php echo anti_email_spam($text); ?>
+        <?php if ($banner_text) { ?>
+        <div class="fxcol leftCol bannerCol">
+          <?php if( !empty( $banner ) ): ?>
+              <div class="banner-img">
+                  <img src="<?php echo esc_url($banner['url']); ?>" alt="<?php echo esc_attr($banner['alt']); ?>" />
+              </div>
+          <?php endif; ?>
+          <div class="banner-text"><?php echo anti_email_spam($banner_text); ?></div>
         </div>
         <?php } ?>
 
         <?php if ($images) { ?>
-        <div class="fxcol imageCol">
+        <div class="fxcol rightCol">
           <div class="images">
-          <?php foreach ($images as $img) { 
-            $imgsrc = $img['image'];
-            $imgTitle = $img['title'];
-            $description = $img['description'];
-            $imgUrl = (isset($imgsrc['url']) && $imgsrc['url']) ? $imgsrc['url'] : '';
-            // $link = $img['link'];
-            // $imgTitle = ( isset($link['title']) && $link['title'] ) ? $link['title'] : '';
-            // $imgLink = ( isset($link['url']) && $link['url'] ) ? $link['url'] : '';
-            // $imgTarget = ( isset($link['target']) && $link['target'] ) ? $link['target'] : '';
-            if($imgUrl) { ?>
-              <figure tabindex="0" class="<?php echo ($description) ? 'hasHover':'noHover' ?>">
-                <div class="inner">
-                  <?php if ($imgTitle) { ?>
-                  <div class="imageTitle"><?php echo $imgTitle ?></div>
-                  <?php } ?>
-                  <?php if ($description) { ?>
-                  <div class="imageText">
-                    <div class="wrap"><?php echo anti_email_spam($description); ?></div>
-                  </div>
-                  <?php } ?>
-                  <img src="<?php echo $imgUrl ?>" alt="<?php echo $imgTitle ?>">
-                </div> 
-              </figure>
-            <?php } ?>
+          <?php foreach ($images as $img) {
+            //print_r($img);
+            $content = $img['content'];
+          ?>
+            <div class="info">
+                <div class="info-icon">
+                    <img src="<?php echo esc_url($img['image']['url']); ?>" alt="<?php echo $img['image']['title']; ?>" />
+                </div>
+                <div class="info-content">
+                <?php echo anti_email_spam($content); ?>
+                </div>
+            </div>
           <?php } ?>
           </div>
         </div>
