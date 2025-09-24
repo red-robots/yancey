@@ -12,7 +12,7 @@ get_header(); ?>
                     <?php the_content() ?>
                 </div>
                 <?php if( have_rows('buttons') ): ?>
-                    <div class="button-float-bottom">
+                    <div class="button-float-bottom buttons-mulitple">
                         <?php while( have_rows('buttons') ): the_row(); 
                             $explore_button = get_sub_field('button');
                             $explore_button_text = (isset($explore_button['title']) && $explore_button['title']) ? $explore_button['title'] : '';

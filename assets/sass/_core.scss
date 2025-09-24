@@ -1740,6 +1740,22 @@ body:not(.home) {
       stroke: $color_primary;
     }
   }
+
+  &.buttons-mulitple {
+    left: 0;
+    transform: translateX(0);
+  
+    @include tab {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+    }
+  
+    .button {
+      min-width: 242px; 
+    }
+  }
 }
 
 .services-content.repeatable.first {
@@ -1851,6 +1867,14 @@ body:not(.home) {
     margin-top: 100px;
     padding: 50px;
 
+    a {
+      color: $color_link;
+
+      &:hover {
+        color: $color_primary;
+      }
+    }
+
     @media screen and (min-width:1199px) {
       padding: 80px 120px 30px;
     }
@@ -1890,6 +1914,10 @@ body:not(.home) {
           width: 48%;
         }
       }
+    }
+
+    &.resources-content {
+      margin-top: 0;
     }
   }
 }
