@@ -22,6 +22,8 @@ get_header(); ?>
                 </div>
             </div>
         <?php endwhile; ?>
+
+        <?php include( locate_template('parts/our-team.php') ); ?>
     </main>
 </div><!-- #primary -->
 <?php

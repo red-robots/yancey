@@ -39,7 +39,7 @@ get_header(); ?>
                             $nav = 1;
                     ?>
                         <div class="nav services-tab" id="services" role="tablist">
-                            <div class="service-item">
+                            <div class="service-item service-item-text">
                                 <div class="service-title">Let Us Handle It</div>
                             </div>
                             <?php while( have_rows('services') ): the_row(); 

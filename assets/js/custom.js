@@ -202,8 +202,39 @@ jQuery(document).ready(function ($) {
       }
     });
   }
-  /* Slideshow */
+  /*** Our Team ***/
 
+
+  $('.popup-activity').on("click", function (e) {
+    e.preventDefault();
+    var id = $(this).attr('data-id');
+    $.ajax({
+      url: frontajax.ajaxurl,
+      type: 'post',
+      dataType: "json",
+      data: {
+        action: 'get_team_content',
+        postid: id
+      },
+      beforeSend: function beforeSend() {
+        $('#loader').show();
+      },
+      success: function success(response) {
+        if (response.content) {
+          $('#popup-content').html(response.content);
+          $('#popup-content').addClass('show');
+          $('#overlay').addClass('show');
+          $('body').addClass('popup-open');
+        }
+      },
+      complete: function complete() {
+        $('#loader').hide();
+      }
+    });
+  });
+  /*** Our Team END ***/
+
+  /* Slideshow */
 
   function do_slideshow(selector) {
     var swiper = new Swiper(selector, {
