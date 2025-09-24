@@ -1717,6 +1717,37 @@ body:not(.home) {
   text-align: center;
 }
 
+.landlords-page {
+  position: relative;
+  z-index: 11;
+}
+
+.button-float-top {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+
+  .button {
+    margin: 0 10px;
+
+    .icon-open-link {
+      margin-top: -2px;
+
+      path {
+        stroke: $color_white;
+      }
+    }
+
+    &:hover .icon-open-link path {
+      stroke: $color_primary;
+    }
+  }
+}
+
 .button-float-bottom {
   position: absolute;
   bottom: -30px;

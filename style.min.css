@@ -1787,6 +1787,12 @@ body:not(.home) .repeatable_featured_image_and_icons .flexwrap:has(.leftCol):has
 .repeatable_layout_resources{padding-bottom:50px}
 .repeatable_layout_resources h3{color:#5f8db5;font-size:35px;margin-bottom:50px;text-transform:uppercase}
 .text-center{text-align:center}
+.landlords-page{position:relative;z-index:11}
+.button-float-top{position:absolute;top:-30px;left:50%;right:0;-webkit-transform:translateX(-50%);transform:translateX(-50%);text-align:center;width:100%}
+.button-float-top .button{margin:0 10px}
+.button-float-top .button .icon-open-link{margin-top:-2px}
+.button-float-top .button .icon-open-link path{stroke:#fff}
+.button-float-top .button:hover .icon-open-link path{stroke:#e1251b}
 .button-float-bottom{position:absolute;bottom:-30px;left:50%;right:0;-webkit-transform:translateX(-50%);transform:translateX(-50%);text-align:center}
 .button-float-bottom .button{margin:0 10px}
 .button-float-bottom .button .icon-open-link{margin-top:-2px}
