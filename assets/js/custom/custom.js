@@ -184,6 +184,26 @@ jQuery(document).ready(function ($) {
       }
     });
   });
+
+  /* Close custom pop-up */
+  $(document).click(function() {
+    var container = $(".popup-content");
+    if (!container.is(event.target) && !container.has(event.target).length) {
+      closeCustomPopUp();
+    }
+  });
+
+  $(document).on('click','#closeModalBtn',function(e){
+    e.preventDefault();
+    closeCustomPopUp();
+  });
+
+  function closeCustomPopUp() {
+    $('#popup-content').removeClass('show');
+    $('body').removeClass('popup-open');
+    $('#overlay').removeClass('show');
+    $('#popup-content .popup-content').remove();
+  }
   /*** Our Team END ***/
 
   /* Slideshow */

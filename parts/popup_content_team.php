@@ -14,20 +14,15 @@ if( $img = get_field('tile_image',$post_id) ) {
   $imgURL = ($img) ? $img['url']:'';
   $imgALT = ($img) ? $img['title']:'';
 }
-$dateTime = get_field('date_and_time',$post_id);
-$other_info = get_field('other_info',$post_id);
-$time_only = '';
-if($dateTime) {
-  $date = DateTime::createFromFormat('Y-m-d H:i:s', $dateTime);
-  $time_only = $date->format('g:i a');
-}
- 
-$flexClass = ($imgURL) ? 'half':'full';
+$phone = get_field('phone',$post_id);
+$email = get_field('email',$post_id);
+$linkedin_url = get_field('linkedin_url',$post_id);
+$instagram_url = get_field('instagram_url',$post_id);
 ?>
 <div class="popup-content activity">
   <a href="javascript:void(0)" id="closeModalBtn"><span>close</span></a>
   <div class="middle-content">
-    <div class="flex-wrap <?php echo $flexClass ?> member-header">
+    <div class="flex-wrap member-header">
         <?php if ($imgURL) { ?>
             <div class="photo">
                 <figure <?php echo $image_style ?>>
@@ -38,25 +33,29 @@ $flexClass = ($imgURL) ? 'half':'full';
         <?php } ?>
         <div class="text">
             <h2 class="member-title"><?php echo $post->post_title; ?></h2>
-            <div class="member-position"><?php echo $position; ?></h2> 
-            <?php if ( $time_only || $other_info ) { ?>
-            <div class="other-info">
-                <?php if ( $time_only ) { ?>
-                <div class="time"><?php echo $time_only ?></div>
-                <?php } ?>
-                <?php if ( $other_info ) { ?>
-                <div class="other"><?php echo $other_info ?></div>
-                <?php } ?>
+            <div class="member-position"><?php echo $position; ?></div>
+            <div class="divider"></div>
+            <div class="member-phone">
+                <a href="tel:<?php echo format_phone_number($phone) ?>"><?php echo $phone; ?></a>
             </div>
+            <div class="member-email"><?php echo anti_email_spam($email); ?></div>
+            <?php if($instagram_url || $linkedin_url){ ?>
+                <div class="member-socials">
+                    <?php if($linkedin_url){ ?>
+                        <a href="<?php echo $linkedin_url; ?>" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    <?php } if($instagram_url){ ?>
+                        <a href="<?php echo $instagram_url; ?>" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    <?php } ?>
+                </div>
             <?php } ?>
-
-            <?php if ( $content ) { ?>
-                <div class="description"><?php echo $content; ?></div>
-            <?php } ?>
-            </div>
         </div>
     </div>
-    <div class="member-content">
-    </div>
+    <?php if ( $content ) { ?>
+        <div class="member-content"><?php echo $content; ?></div>
+    <?php } ?>
   </div>
 </div>

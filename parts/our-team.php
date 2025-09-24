@@ -1,6 +1,8 @@
 <?php if( have_rows('our_team') ) {
   $count = 1;
 ?>
+<div id="overlay"></div>
+<div id="popup-content"></div>
 <section id="team" class="repeatable our-team">
     <div class="wrapper">
       <h3 class="text-center">OUR TEAM</h3>
@@ -15,12 +17,8 @@
             $featImage = wp_get_attachment_image_src($thumbnail_id,'large');
             $imageStyle = ($featImage) ? ' style="background-image:url('.$featImage[0].')"':'';
             $position = get_field('title', $post_id);
-            // $postType = get_post_type($post_id);
-            // $postTypeTitle = 'post-type-'.$postType;
-            // $pagelink = ($postType=='artists') ? 'javascript:void(0)' : get_permalink($post_id);
-            // $popup = ($postType=='artists') ? 'popup-activity' : '';
         ?>
-          <div data-postid="<?php echo $post_id; ?>" class="fxcol teamCol team-<?php echo $count; ?>">
+          <div data-postid="<?php echo $post_id; ?>" class="fxcol teamCol team-<?php echo $post_id; ?>">
             <div class="wrap">
               <a href="javascript:void(0)" data-id="<?php echo $post_id; ?>" class="popup-activity">
                 <div class="image">

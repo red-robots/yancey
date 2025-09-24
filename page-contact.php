@@ -4,6 +4,8 @@
  */
 
 get_header(); ?>
+<div id="overlay"></div>
+<div id="popup-content"></div>
 <div id="primary" class="content-area-full content-default-template contact-page">
     <main id="main" class="site-main" role="main">
         <?php while ( have_posts() ) : the_post(); ?>
@@ -31,9 +33,11 @@ get_header(); ?>
 
                                         if($name || $position) {
                                     ?>
-                                        <div class="info">
-                                            <div class="name"><?php echo $name; ?></div> 
-                                            <div class="position"><?php echo $position; ?></div>
+                                        <div class="info" data-postid="<?php echo $post_id; ?>" class="fxcol teamCol team-<?php echo $post_id; ?>">
+                                            <a href="javascript:void(0)" data-id="<?php echo $post_id; ?>" class="popup-activity">
+                                                <div class="name"><?php echo $name; ?></div> 
+                                                <div class="position"><?php echo $position; ?></div>
+                                            </a>
                                         </div>
                                     <?php } ?>
                                 <?php endwhile; ?>

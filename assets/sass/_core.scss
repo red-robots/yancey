@@ -2048,6 +2048,15 @@ body:not(.home) {
         font-size: 18px;
         margin-bottom: 15px;
 
+        a {
+          text-decoration: none;
+          color: $color_text_main;
+
+          &:hover {
+            color: $color_white;
+          }
+        }
+
         .name {
           font-family: $font_secondary;
           font-weight: 600;
@@ -2601,4 +2610,276 @@ body:not(.home) {
   }
 }
 
+body.popup-open {
+  overflow: hidden;
+}
+#overlay {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color_text_main,85%);
+  z-index: 300;
+  @include animateThis(0.5s);
+  &.show {
+    display: block;
+    @include animateEffect('fadeIn');
+  }
+}
+#popup-content {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 12vh 20px 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  overflow: auto;
+  &.show {
+    @include flexgroup();
+    @include flexbox-justify(center);
+    @include flexbox-align-items(center);
+  }
+  .popup-content {
+    border-radius: 10px;
+    max-width: 900px;
+    width: 100%;
+    min-height: 15em;
+    background: $color_white;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    position: relative;
+    color: $color_text_main;
+    @include animateThis(1s);
+    @include animateEffect('fadeIn');
 
+    @include mid {
+      max-width: 1170px;
+    }
+
+    .flex-wrap {
+      @include flexgroup();
+      .text {
+        padding: 20px 0;
+        width: 100%;
+
+        @include tab {
+          width: 60%;
+          padding: 4vw 0 4vw 4vw;
+        }
+      }
+      .photo {
+        height: 400px;
+        width: 100%;
+        position: relative;
+        margin-top: -100px;
+
+        @include tab {
+          height: 500px;
+          width: 40%;
+          margin-top: -145px;
+        }
+
+        figure {
+          border-radius: 10px;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          @include backgroundImage(center);
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .member-header {
+      position: relative;
+    }
+    .member-title {
+      color: $color_secondary;
+      font-family: $font_secondary;
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      @include tab {
+        font-size: 45px;
+      }
+    }
+    .member-position {
+      font-style: italic;
+      font-size: 24px;
+    }
+    .member-phone,
+    .member-email {
+      font-size: 18px;
+      margin-bottom: 10px;
+
+      a {
+        color: $color_text_main;
+        text-decoration: none;
+      }
+    }
+    .member-socials {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 15px;
+
+      i {
+        font-size: 24px;
+      }
+    }
+    .divider {
+      background-color: $color_primary;
+      height: 1px;
+      width: 120px;
+      margin: 20px 0 30px;
+    }
+    .member-content {
+      margin-top: 30px;
+
+      @include tab {
+        margin-top: 60px;
+      }
+
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &.activity {
+      .title {
+        margin: 0 0 20px;
+      }
+      .middle-content {
+        padding: 50px;
+
+        @include tab {
+          padding: 80px;
+        }
+      }
+      figure, .wp-block-image {
+        margin: 0 0 30px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .description p {
+        margin: 15px 0;
+      }
+      a {
+        color: $color_secondary;
+        &:hover {
+          color: tint($color_secondary,20%);
+        }
+      }
+      .wp-block-button__link {
+        background-color: #FFF;
+        color: $color_secondary;
+        padding: 15px 25px 13px;
+        &:hover {
+          background: rgba(255,255,255,.75);
+        }
+      }
+      .flex-wrap.full {
+        .text {
+          padding: 0 0;
+        }
+      }
+      .flex-wrap.half {
+        .text {
+          @include tab {
+            padding: 0 30px 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  #closeModalBtn {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transform: scale(0.75);
+    span {
+      overflow: hidden;
+      display: block;
+      width: 0;
+      z-index: -99em;
+    }
+    &:before, &:after {
+      content:"";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: rgba(#000, .9);
+      position: absolute;
+      top: 12px;
+      left: 0;
+      transition: all ease .3s;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      &:before, &:after {
+        background: $color_secondary;
+      }
+    }
+  }
+
+  #closePopUp {
+    display: block;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -40px;
+    right: -5px;
+    opacity: 0.7;
+    transform: scale(0.8);
+    span {
+      display: none;
+    }
+    &:before, &:after {
+      content:"";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #FFF;
+      position: absolute;
+      top: 14px;
+      left: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      opacity: 1;
+    }
+    @include tab {
+      top: -42px;
+      right: 42%;
+      transform: translateX(-42%);
+    }
+  }
+}
