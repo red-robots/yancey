@@ -67,10 +67,22 @@ if( is_single() || is_page() ) {
         </nav>
 
       </div>
+      
+      <?php
+        $get_started = get_field('get_started_button', 'option');
+        if($get_started):
+          $get_started_text = (isset($get_started['title']) && $get_started['title']) ? $get_started['title'] : '';
+          $get_started_url = (isset($get_started['url']) && $get_started['url']) ? $get_started['url'] : '';
+          $get_started_target = (isset($get_started['target']) && $get_started['target']) ? $get_started['target'] : '_self';
 
-      <div class="rightCol">
-        <a href="#" class="button">Get Started</a>
-      </div>
+          if($get_started_text && $get_started_url) {
+      ?>
+        <div class="rightCol">
+          <a href="<?php echo $get_started_url; ?>" target="<?php echo $get_started_target; ?>" class="button">
+            <?php echo $get_started_text; ?>
+          </a>
+        </div>
+      <?php } endif; ?>
     </div>
 
 
