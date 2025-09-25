@@ -2854,7 +2854,7 @@ body.popup-open {
       a {
         color: $color_secondary;
         &:hover {
-          color: tint($color_secondary,20%);
+          color: $color_primary;
         }
       }
       .wp-block-button__link {

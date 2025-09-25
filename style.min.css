@@ -1911,7 +1911,7 @@ body.popup-open{overflow:hidden}
 #popup-content .popup-content.activity figure img,#popup-content .popup-content.activity .wp-block-image img{width:100%;height:auto}
 #popup-content .popup-content.activity .description p{margin:15px 0}
 #popup-content .popup-content.activity a{color:#5f8db5}
-#popup-content .popup-content.activity a:hover{color:#7fa4c4}
+#popup-content .popup-content.activity a:hover{color:#e1251b}
 #popup-content .popup-content.activity .wp-block-button__link{background-color:#fff;color:#5f8db5;padding:15px 25px 13px}
 #popup-content .popup-content.activity .wp-block-button__link:hover{background:rgba(255,255,255,.75)}
 #popup-content .popup-content.activity .flex-wrap.full .text{padding:0}
