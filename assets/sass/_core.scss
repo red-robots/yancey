@@ -1772,6 +1772,9 @@ body:not(.home) {
       }
 
       @include tab {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
         padding: 40px;
         width: 47%;
       }
