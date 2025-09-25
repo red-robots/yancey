@@ -315,6 +315,16 @@ a,input,button,textarea,select {
       transform: translateY(0);
     }
   }
+
+  &-text {
+    color: $color_link;
+    font-family: $font-secondary;
+    text-decoration: underline;
+
+    &:hover {
+      color: $color_primary;
+    }
+  }
 }
 
 .hero {
@@ -1715,11 +1725,65 @@ body:not(.home) {
 .repeatable_layout_resources {
   padding-bottom: 50px;
 
-  h3 {
+  h3.header {
     color: $color_secondary;
     font-size: 35px;
     margin-bottom: 50px;
     text-transform: uppercase;
+  }
+
+  .resources-content {
+    display: flex;
+    margin-top: 0;
+    width: 100%;
+    // justify-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include tab {
+      flex-direction: row;
+    }
+
+    .resource-item {
+      background-color: $color_light_blue;
+      border-radius: 10px;
+      padding: 30px;
+      width: 100%;
+
+      h4.title {
+        color: $color_secondary;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .content {
+        margin-bottom: 20px;
+
+        h2, h3, h4, h5, h6 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+
+      @include tab {
+        padding: 40px;
+        width: 47%;
+      }
+
+      @include mid {
+        width: 22%;
+      }
+
+      @include xl {
+        width: 23%;
+      }
+    }
   }
 }
 /*** Tenants Page - END ***/
@@ -1957,10 +2021,6 @@ body:not(.home) {
           width: 48%;
         }
       }
-    }
-
-    &.resources-content {
-      margin-top: 0;
     }
   }
 }

@@ -1610,6 +1610,8 @@ a,input,button,textarea,select{-webkit-transition:all ease .3s;transition:all ea
 .button:after{content:"";display:block;width:100%;height:205%;-webkit-transition:all ease .4s;transition:all ease .4s;position:absolute;top:0;left:0;z-index:-1;-webkit-transform:translateY(-110%);transform:translateY(-110%);background-color:#e1251b;background-size:100% 100%;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,white),color-stop(65%,white),color-stop(60%,rgba(255,255,255,0)),color-stop(72%,rgba(255,255,255,0)),color-stop(65%,white),color-stop(78%,white),color-stop(75%,rgba(255,255,255,0)),color-stop(85%,rgba(255,255,255,0)),color-stop(80%,white),color-stop(90%,white),color-stop(90%,rgba(255,255,255,0)),color-stop(95%,rgba(255,255,255,0)),color-stop(90%,white),to(white));background-image:linear-gradient(to bottom,white 0,white 65%,rgba(255,255,255,0) 60%,rgba(255,255,255,0) 72%,white 65%,white 78%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 85%,white 80%,white 90%,rgba(255,255,255,0) 90%,rgba(255,255,255,0) 95%,white 90%,white 100%)}
 .button:hover,.button:focus{color:#e1251b;background-color:#fff;border-color:#e1251b}
 .button:hover:after,.button:focus:after{-webkit-transform:translateY(0);transform:translateY(0)}
+.button-text{color:#065492;font-family:"DM Sans",sans-serif;text-decoration:underline}
+.button-text:hover{color:#e1251b}
 .hero{position:relative;z-index:10}
 body:not(.home) .hero.hero-static_image .static-hero{background:-webkit-gradient(linear,left top,left bottom,color-stop(20%,#19586e),to(#30aad4));background:linear-gradient(to bottom,#19586e 20% 100%,#30aad4 100% 0)}
 body:not(.home) .hero.hero-static_image figure.image{opacity:.6}
@@ -1787,7 +1789,13 @@ body:not(.home) .repeatable_featured_image_and_icons .flexwrap:has(.leftCol):has
 .our-team .teamCol .team-info .title:after{content:"";position:absolute;background-color:#e1251b;height:1px;width:50px;left:0;right:0;bottom:5px;margin:0 auto}
 .our-team .teamCol .team-info .position{color:#444;font-size:18px}
 .repeatable_layout_resources{padding-bottom:50px}
-.repeatable_layout_resources h3{color:#5f8db5;font-size:35px;margin-bottom:50px;text-transform:uppercase}
+.repeatable_layout_resources h3.header{color:#5f8db5;font-size:35px;margin-bottom:50px;text-transform:uppercase}
+.repeatable_layout_resources .resources-content{display:-webkit-box;display:-ms-flexbox;display:flex;margin-top:0;width:100%;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;gap:30px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.repeatable_layout_resources .resources-content .resource-item{background-color:#ecf1f6;border-radius:10px;padding:30px;width:100%}
+.repeatable_layout_resources .resources-content .resource-item h4.title{color:#5f8db5;font-size:24px;font-weight:600;margin-bottom:20px}
+.repeatable_layout_resources .resources-content .resource-item .content{margin-bottom:20px}
+.repeatable_layout_resources .resources-content .resource-item .content h2,.repeatable_layout_resources .resources-content .resource-item .content h3,.repeatable_layout_resources .resources-content .resource-item .content h4,.repeatable_layout_resources .resources-content .resource-item .content h5,.repeatable_layout_resources .resources-content .resource-item .content h6{font-size:20px}
+.repeatable_layout_resources .resources-content .resource-item .content p{font-size:18px}
 .text-center{text-align:center}
 .landlords-page{position:relative;z-index:11}
 .button-float-top{position:absolute;top:-30px;left:50%;right:0;-webkit-transform:translateX(-50%);transform:translateX(-50%);text-align:center;width:100%}
@@ -1822,7 +1830,6 @@ body:not(.home) .repeatable_featured_image_and_icons .flexwrap:has(.leftCol):has
 .services-tab-content .main-content{color:#5f8db5;font-family:"DM Sans",sans-serif;font-size:25px;margin-bottom:20px}
 .services-tab-content .sub-content h3{font-size:18px;font-weight:600}
 .services-tab-content .sub-content p{margin-bottom:20px}
-.services-tab-content.resources-content{margin-top:0}
 .contact-wrapper{padding-top:100px;padding-bottom:150px}
 .contact-wrapper .flexwrap{position:relative}
 .contact-wrapper .flexwrap .fxcol{position:relative;z-index:5}
@@ -1936,6 +1943,8 @@ body:not(.home) .repeatable_featured_image_and_icons .leftCol .imageText{padding
 .our-team .team-text .header{font-size:35px}
 .our-team .team-text .content{font-size:26px}
 .our-team .teamCol{width:27.3%}
+.repeatable_layout_resources .resources-content{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+.repeatable_layout_resources .resources-content .resource-item{padding:40px;width:47%}
 .button-float-bottom.buttons-mulitple{position:absolute;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);width:80%}
 #popup-content .popup-content .flex-wrap .text{width:60%;padding:4vw 0 4vw 4vw}
 #popup-content .popup-content .flex-wrap .photo{height:500px;width:40%;margin-top:-145px}
@@ -1969,11 +1978,13 @@ body:not(.home) .repeatable_featured_image_and_icons .leftCol .imageText{padding
 }@media(min-width:1250px){.about-page .entry-content{padding-bottom:80px}
 .about-content{font-size:22px;padding:80px 150px}
 .our-team .teamCol .image{height:500px}
+.repeatable_layout_resources .resources-content .resource-item{width:22%}
 #popup-content .popup-content{max-width:1170px}
 }@media screen and (min-width:1251px){.repeatable_layout1 .imageCol .images figure .imageText{padding:2vw 3vw}
 .repeatable_layout2 .flexwrap{width:90%;margin:0 auto}
 .contact-wrapper .flexwrap{width:90%;margin:0 auto}
 }@media(min-width:1380px){.wrapper{padding-left:70px;padding-right:70px}
+.repeatable_layout_resources .resources-content .resource-item{width:23%}
 }@media screen and (min-width:1481px){.hero.hero-static_image .imageCaption .inside{max-width:700px}
 .hero.hero-static_image .imageCaption .title{font-size:clamp(30px,5vw,4rem)}
 .hero.hero-static_image .imageCaption .text{font-size:clamp(1rem,2vw,23px)}

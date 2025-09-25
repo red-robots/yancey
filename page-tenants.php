@@ -4,7 +4,7 @@
  */
 
 get_header(); ?>
-<div class="content-area-full content-default-template about-page">
+<div class="content-area-full content-default-template tenants-page">
     <main id="main" class="site-main" role="main">
         <?php while ( have_posts() ) : the_post(); ?>        
             <section class="repeatable repeatable_layout1 first first-section services-content">
