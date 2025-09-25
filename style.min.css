@@ -1944,7 +1944,7 @@ body:not(.home) .repeatable_featured_image_and_icons .leftCol .imageText{padding
 .our-team .team-text .content{font-size:26px}
 .our-team .teamCol{width:27.3%}
 .repeatable_layout_resources .resources-content{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
-.repeatable_layout_resources .resources-content .resource-item{padding:40px;width:47%}
+.repeatable_layout_resources .resources-content .resource-item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-ms-flex-item-align:stretch;align-self:stretch;padding:40px;width:47%}
 .button-float-bottom.buttons-mulitple{position:absolute;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);width:80%}
 #popup-content .popup-content .flex-wrap .text{width:60%;padding:4vw 0 4vw 4vw}
 #popup-content .popup-content .flex-wrap .photo{height:500px;width:40%;margin-top:-145px}
