@@ -36,7 +36,7 @@ $instagram_url = get_field('instagram_url',$post_id);
             <div class="member-position"><?php echo $position; ?></div>
             <div class="divider"></div>
             <div class="member-phone">
-                <a href="tel:<?php echo format_phone_number($phone) ?>"><?php echo $phone; ?></a>
+                <a href="tel:<?php echo format_phone_number($phone) ?>"><?php echo localize_us_number($phone); ?></a>
             </div>
             <div class="member-email"><?php echo anti_email_spam($email); ?></div>
             <?php if($instagram_url || $linkedin_url){ ?>
