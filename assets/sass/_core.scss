@@ -327,12 +327,24 @@ a,input,button,textarea,select {
     }
   }
 }
+body:not(.home) {
+  .hero.hero-static_image {
+    .static-hero {
+      background: linear-gradient(to bottom, #19586E 20% 100%, #30AAD4 100% 0%);
+    }
+    figure.image {
+      opacity: 0.6;
+    }
+  }
+}
 .hero.hero-static_image {
   padding: 0 30px;
   .static-hero {
     position: relative;
     z-index: 10;
     margin-top: -3vw;
+    border-radius: 10px;
+    overflow: hidden;
   }
   .imageCaption {
     position: absolute;
@@ -523,7 +535,7 @@ h6 {font-size: 18px;}
   background: $color_light_blue;
   padding-top: 90px;
   padding-bottom: 120px;
-  margin-top: -15px;
+  // margin-top: -15px;
 }
 .repeatable_layout1 {
   .imageCol {
