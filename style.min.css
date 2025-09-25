@@ -1790,7 +1790,7 @@ body:not(.home) .repeatable_featured_image_and_icons .flexwrap:has(.leftCol):has
 .our-team .teamCol .team-info .position{color:#444;font-size:18px}
 .repeatable_layout_resources{padding-bottom:50px}
 .repeatable_layout_resources h3.header{color:#5f8db5;font-size:35px;margin-bottom:50px;text-transform:uppercase}
-.repeatable_layout_resources .resources-content{display:-webkit-box;display:-ms-flexbox;display:flex;margin-top:0;width:100%;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;gap:30px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.repeatable_layout_resources .resources-content{display:-webkit-box;display:-ms-flexbox;display:flex;margin-top:0;width:100%;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;gap:30px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .repeatable_layout_resources .resources-content .resource-item{background-color:#ecf1f6;border-radius:10px;padding:30px;width:100%}
 .repeatable_layout_resources .resources-content .resource-item h4.title{color:#5f8db5;font-size:24px;font-weight:600;margin-bottom:20px}
 .repeatable_layout_resources .resources-content .resource-item .content{margin-bottom:20px}
