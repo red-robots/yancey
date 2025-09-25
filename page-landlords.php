@@ -19,7 +19,7 @@ get_header(); ?>
 
                     if($explore_button_text && $explore_button_url) {
                 ?>
-                    <span class="button-float-top">
+                    <span class="button-float-bottom">
                         <a class="button button-element" href="<?php echo $explore_button_url; ?>" target="<?php echo $explore_button_target; ?>">
                             <?php echo $explore_button_text; ?>
                             <span class="icon-open-link">
