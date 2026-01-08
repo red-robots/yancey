@@ -17,6 +17,8 @@
             $featImage = wp_get_attachment_image_src($thumbnail_id,'large');
             $imageStyle = ($featImage) ? ' style="background-image:url('.$featImage[0].')"':'';
             $position = get_field('title', $post_id);
+
+            if($team_title && $thumbnail_id){
         ?>
           <div data-postid="<?php echo $post_id; ?>" class="fxcol teamCol team-<?php echo $post_id; ?>">
             <div class="wrap">
@@ -35,6 +37,7 @@
             </div>
           </div>
         <?php
+            }
             $count++;
           endwhile;
 
@@ -46,7 +49,7 @@
           $button_url = (isset($button['url']) && $button['url']) ? $button['url'] : '';
           $button_target = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
 
-          if( $header && $content ){
+          if( $header ){
         ?>
           <div class="fxcol teamCol team-text">
             <div class="wrap">
