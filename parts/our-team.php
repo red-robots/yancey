@@ -46,7 +46,7 @@
           $button_url = (isset($button['url']) && $button['url']) ? $button['url'] : '';
           $button_target = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
 
-          if( $header ){
+          if( $header && $content ){
         ?>
           <div class="fxcol teamCol team-text">
             <div class="wrap">
